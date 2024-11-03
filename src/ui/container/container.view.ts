@@ -94,7 +94,7 @@ export abstract class ContainerView {
    * @param targetEl clicked image's element
    * @returns
    */
-  public renderContainer = (targetEl: HTMLImageElement): void => {
+public renderContainer = (targetEl: HTMLImageElement): void => {
     if (!this.checkStatus()) return;
     const matchedImg = this.initContainerView(targetEl, this.getParentContainerEl(targetEl));
     if (!matchedImg) return;

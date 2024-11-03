@@ -61,7 +61,7 @@ export default class ImageToolkitPlugin extends Plugin {
       container.removeOitContainerView();
     });
     this.containerFactory.clearAll();
-    document.off('click', this.imgSelector, this.clickImage);
+    document.off('dblclick', this.imgSelector, this.clickImage);
     document.off('mouseover', this.imgSelector, this.mouseoverImg);
     document.off('mouseout', this.imgSelector, this.mouseoutImg);
   }
@@ -187,7 +187,7 @@ export default class ImageToolkitPlugin extends Plugin {
       doc = document;
     }
     if (this.imgSelector) {
-      doc.off('click', this.imgSelector, this.clickImage);
+      doc.off('dblclick', this.imgSelector, this.clickImage);
       doc.off('mouseover', this.imgSelector, this.mouseoverImg);
       doc.off('mouseout', this.imgSelector, this.mouseoutImg);
     }
@@ -210,7 +210,7 @@ export default class ImageToolkitPlugin extends Plugin {
       // doc.onclick = (event: MouseEvent) =>{
       //     console.log(event.target);
       // }
-      doc.on('click', this.imgSelector, this.clickImage);
+      doc.on('dblclick', this.imgSelector, this.clickImage);
       doc.on('mouseover', this.imgSelector, this.mouseoverImg);
       doc.on('mouseout', this.imgSelector, this.mouseoutImg);
     }
